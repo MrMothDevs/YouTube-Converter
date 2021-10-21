@@ -1,6 +1,6 @@
-DocumentTimeline.querySelector("#download.btn").addEventListener("click", async function(){
+document.querySelector("#download-btn").addEventListener('click', async function(){
     let video = document.querySelector("#video-link").value;
-    if(video.lengtj == 0){
+    if(video.length == 0){
         return;
     }
     try {
@@ -16,12 +16,12 @@ DocumentTimeline.querySelector("#download.btn").addEventListener("click", async 
         });
 
         let filename = data.videoDetails.title.replace(/\s{1,}/, "-") + ".mp3";
-
+        console.log(filename)
         let itag = audios[0].itag;
 
-        notify('"${filename}" will be downloaded automatically');
+        notify(`"${filename}" will be downloaded automatically`);
 
-        document.querySelector("#download-frame").src = '/download?videoURL=${video}&itag=${itag}&filename=${filename}';
+        document.querySelector("#download-frame").src = `/download?videoURL=${video}&itag=${itag}&filename=${filename}`;
      } catch(msg){
         document.querySelector(".loader").classList.remove("show");
         alert("Something went wrong. Please try again later.")
