@@ -1,8 +1,8 @@
 {
-  "name": "yt-downloader",
+  "name": "YT Convertor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.4.0",
     "fs-extra": "^10.0.0",

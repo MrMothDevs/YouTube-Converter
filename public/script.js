@@ -1,9 +1,9 @@
 var browser = browser || chrome
 
 // heroku endpoints
-const server_endpoint = 'http://localhost:3000/'
-const download_endpoint = 'http://localhost:3000/download/'
-const get_info_endpoint = 'http://localhost:3000/getInfo/'
+const server_endpoint = 'http://localhost:5000/'
+const download_endpoint = 'http://localhost:5000/download/'
+const get_info_endpoint = 'http://localhost:5000/getInfo/'
 const wakeup_dlp_endpoint = 'https://yt-dlp-back.herokuapp.com/wakeup'
 
 // locally
