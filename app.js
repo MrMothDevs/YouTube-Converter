@@ -25,4 +25,4 @@ app.get("/download", function(req, res){
 });
 
 
-app.listen(`${process.env.PORT}`, console.log(`I'm ready and spying on port ${process.env.PORT}!`));
+app.listen(`${process.env.PORT}`, console.log(`I'm ready and spying on port http://localhost:${process.env.PORT}`));
