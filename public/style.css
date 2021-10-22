@@ -114,10 +114,10 @@ button span:after {
     content: '⭳';
     position: absolute;
     opacity: 0;
-    top: 0;
+    top: -8px;
     right: -20px;
     transition: 0.5s;
-    font-size: 20px;
+    font-size: 25px;
 }
   
 button:hover span {
