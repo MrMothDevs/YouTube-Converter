@@ -104,6 +104,31 @@ body {
     color: #fff;
 }
 
+button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+button span:after {
+    content: '⭳';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 20px;
+}
+  
+button:hover span {
+    padding-right: 25px;
+}
+  
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 .notification {
     position: fixed;
     top: 20px;
