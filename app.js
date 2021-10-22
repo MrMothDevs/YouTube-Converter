@@ -1,6 +1,7 @@
 let express = require('express');
 let ytdl = require('ytdl-core')
 let app = express();
+require('dotenv').config()
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -24,4 +25,4 @@ app.get("/download", function(req, res){
 });
 
 
-app.listen(5000);
+app.listen(5000, console.log("I'm ready and spying on port 5000!"));
