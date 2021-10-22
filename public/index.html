@@ -2,29 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Converter</title>
+
+    <title>YT Downloader</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script type="module" src="./script.js"></script>
 </head>
 <body>
-    <div class="loader"></div>
-        <iframe id="download-frame" src="" frameborder="0"></iframe>
-        <div class="app">
-            <div class="container">
-                <h1><span><i class="fab fa-youtube"></i></span> YouTube Converter</h1>
-                <div class="form">
-                    <input type="text" id="video-link" placeholder="https://www.youtube.com/watch?v=Vd9GUJxPHDc">
-                    <button id="download-btn"><span>Download</span></button>
-                </div>
+    <header>
+        <h1>YouTube to MP3 converter</h1>
+    </header>
+
+    <div class="spacer layer"></div>
+
+    <div class="main-container">
+        <div id="url-form-container">
+            <p class="error-box" id="url-error-box">
+                Sorry, the url you provided is incorrect!
+            </p>
+            <form method="GET" class="convert-form">
+                <input type="text" name="url" id="url-text-input" placeholder="Paste your youtube url here..">
+                <input type="submit" class="btn" id="submit-btn" name="submit" value="Find">
+            </form>
+        </div>
+     
+        
+        <div class="loading-ring" id="get-info-ring"><div></div><div></div><div></div><div></div></div>
+        
+        <div id="download-container">
+            <div id="img-container">
+                <img id="thumbnail_img" src="" alt="thumbnail" width="600" >
+                
+                <p class="error-box" id="song-cut-time-error-box">
+                    Wrong start or end time provided!
+                </p>
+                <form class="song-cut-form">
+                    <div>
+                        <p>Start</p>
+                        <input type="text" name="song-start" id="song-start-input" placeholder="0:00">
+                    </div>
+                    <div>
+                        <p>End</p>
+                        <input type="text" name="song-end" id="song-end-input" placeholder="0:00">
+                    </div>
+                </form>
+            </div>
+            <div id="download-info-container">
+                <ul class="song-info-list">
+                    <li id="song-title">Some long song name</li>
+                    <li id="artist">Tove Lo</li>
+                    <li id="song-duration">05:22</li>
+                </ul>
+
+                <select class="custom-select" name="bitrate-select" id="bitrate-select">
+                    <optgroup label="mp3">
+                        <option value="64k">mp3 64kbps</option>
+                        <option value="128k">mp3 128kbps</option>
+                        <option value="192k">mp3 192kbps</option>
+                        <option value="256k">mp3 256kbps</option>
+                        <option value="320k">mp3 320kbps</option>
+                    </optgroup>
+                </select>
+
+                <div class="loading-ring" id="convert-ring"><div></div><div></div><div></div><div></div></div>
+
+
+                <button class="btn" id="convert-btn">Convert</button>
+                
+                <a id="download-btn" download href="" target="_blank">
+                    <button class="btn">Download</button>
+                </a>
             </div>
         </div>
-    <script src="js/script.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/particles.app.js"></script>
+       
+        <div class="info-container">
+            <div class="card">
+                <h3>Instruction</h3>
+                <ol>
+                    <li>Paste youtube link of desired song to the text area</li>
+                    <li>Click 'Convert' and wait for the download button to pop up</li>
+                    <li>Click 'Download'</li>
+                    <li>Enjoy!</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>Features</h3>
+                <ul>
+                    <li>Automatically ads a thumbnail, author and song title to the mp3 meta-tags</li>
+                    <li>High quality audio in mp3 format</li>
+                    <li>Bitrates supported from 64kbps to 320kbps</li>
+                    <li>No registration or software installation needed</li>
+                    <li>It's free and always will be!</li>
+                    <li>Unlimited conversions and downloads</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="spacer layer flip"></div>
+
+    <footer> Copyright &copy; 2021 Kamil Moszczyc</footer> 
 </body>
 </html>
