@@ -20,7 +20,7 @@ body {
 }
 
 .loader .show {
-    display: block;
+    display: none;
 }
 
 .loader::before {
@@ -46,7 +46,7 @@ body {
     }
 }
 
-#download-fram {
+#download-frame {
     display: none;
 }
 
@@ -58,6 +58,7 @@ body {
     align-items: center;
 }
 
+
 .app .container {
     text-align: center;
     width: 95%;
@@ -66,7 +67,12 @@ body {
 
 .app h1 {
     font-size: 55px;
+    font-family:'Ubuntu', sans-serif;
     margin-bottom: 10px;
+}
+
+.fa-youtube {
+    color: #DA2B26;
 }
 
 .app .form {
@@ -78,8 +84,12 @@ body {
     padding: 15px;
     font-size: 16px;
     outline: none;
-    border: 2px solid #ff0000;
+    border: 2px solid #DA2B26;
     flex: 1;
+}
+
+.app .form input::placeholder {
+    color: rgb(158, 142, 142);
 }
 
 .app .form button {
@@ -90,6 +100,8 @@ body {
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: #DA2B26;
+    color: #fff;
 }
 
 .notification {
