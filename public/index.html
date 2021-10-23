@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube converter</title>
+    <title>YouTube Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>YouTube to MP3 converter</h1>
-    </header>
-
-    <div class="spacer layer"></div>
-
+    <div class="morph">
+        <div class="word">YouTube</div>
+        <div class="word">Converter</div>
+    </div>
     <div class="main-container">
         <div id="url-form-container">
             <p class="error-box" id="url-error-box">
                 Sorry, the url you provided is incorrect!
             </p>
             <form method="GET" class="convert-form">
-                <input type="text" name="url" id="url-text-input" placeholder="Paste your youtube url here..">
-                <input type="submit" class="btn" id="submit-btn" name="submit" value="Find">
+                <input type="text" name="url" class="url-input" id="url-text-input" placeholder="https://www.youtube.com/watch?v=Vd9GUJxPHDc">
+                <input type="submit" class="btn submit-btn" id="submit-btn" name="submit" value="Find">
             </form>
         </div>
-     
+        
         
         <div class="loading-ring" id="get-info-ring"><div></div><div></div><div></div><div></div></div>
         
@@ -52,7 +53,7 @@
                     <li id="artist">Tove Lo</li>
                     <li id="song-duration">05:22</li>
                 </ul>
-
+                
                 <select class="custom-select" name="bitrate-select" id="bitrate-select">
                     <optgroup label="mp3">
                         <option value="64k">mp3 64kbps</option>
@@ -62,10 +63,10 @@
                         <option value="320k">mp3 320kbps</option>
                     </optgroup>
                 </select>
-
+                
                 <div class="loading-ring" id="convert-ring"><div></div><div></div><div></div><div></div></div>
 
-
+                
                 <button class="btn" id="convert-btn">Convert</button>
                 
                 <a id="download-btn" download href="" target="_blank">
@@ -73,33 +74,7 @@
                 </a>
             </div>
         </div>
-       
-        <div class="info-container">
-            <div class="card">
-                <h3>Instruction</h3>
-                <ol>
-                    <li>Paste youtube link of desired song to the text area</li>
-                    <li>Click 'Convert' and wait for the download button to pop up</li>
-                    <li>Click 'Download'</li>
-                    <li>Enjoy!</li>
-                </ol>
-            </div>
-
-            <div class="card">
-                <h3>Features</h3>
-                <ul>
-                    <li>Automatically ads a thumbnail, author and song title to the mp3 meta-tags</li>
-                    <li>High quality audio in mp3 format</li>
-                    <li>Bitrates supported from 64kbps to 320kbps</li>
-                    <li>No registration or software installation needed</li>
-                    <li>It's free and always will be!</li>
-                    <li>Unlimited conversions and downloads</li>
-                </ul>
-            </div>
-        </div>
     </div>
-    <div class="spacer layer flip"></div>
-
     <footer> Copyright &copy; 2021 MrMothDevs</footer> 
     <script src="script.js"></script>
 </body>
