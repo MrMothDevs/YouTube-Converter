@@ -1,15 +1,15 @@
 var browser = browser || chrome
 
 // heroku endpoints
-const server_endpoint = 'https://youtube-convertermd.herokuapp.com/'
-const download_endpoint = 'https://youtube-convertermd.herokuapp.com/download/'
-const get_info_endpoint = 'https://youtube-convertermd.herokuapp.com/getInfo/'
-const wakeup_dlp_endpoint = 'https://yt-dlp-back.herokuapp.com/wakeup'
+const server_endpoint = 'http://localhost:5000/'
+const download_endpoint = 'http://localhost:5000/download/'
+const get_info_endpoint = 'http://localhost:5000/getInfo/'
+const wakeup_dlp_endpoint = 'http://localhost:5000/wakeup'
 
 // locally
-// const server_endpoint = 'http://localhost:3000/'
-// const download_endpoint = 'http://localhost:3000/download/'
-// const get_info_endpoint = 'http://localhost:3000/getInfo/'
+// const server_endpoint = 'http://localhost:5000/'
+// const download_endpoint = 'http://localhost:5000/download/'
+// const get_info_endpoint = 'http://localhost:5000/getInfo/'
 
 
 const submit_btn = document.getElementById("submit-btn")
