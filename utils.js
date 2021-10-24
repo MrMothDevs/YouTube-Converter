@@ -10,7 +10,7 @@ const { default: axios } = require('axios');
 
 String.prototype.replaceAll = function replaceAll(search, replace) { return this.split(search).join(replace); }
 
-const ytdlp_endpoint = 'https://yt-dlp-back.herokuapp.com/download'
+const ytdlp_endpoint = 'https://ytdlpmd.herokuapp.com/download'
 
 async function getInfo(url){
     const usefullPart = url.split('&list=')[0]
