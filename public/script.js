@@ -4,7 +4,7 @@ var browser = browser || chrome
  const server_endpoint = 'https://youtube-convertermd.herokuapp.com/'
  const download_endpoint = 'https://youtube-convertermd.herokuapp.com/download/'
  const get_info_endpoint = 'https://youtube-convertermd.herokuapp.com/getInfo/'
-const wakeup_dlp_endpoint = 'https://ytdlpmd.herokuapp.com/'
+const wakeup_dlp_endpoint = 'https://ytdlpmd.herokuapp.com/wakeup'
 
 // locally
 //const server_endpoint = 'http://localhost:5000/'
