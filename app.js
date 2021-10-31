@@ -18,8 +18,6 @@ app.listen(port, () => {
     console.log(`Server running on port http://localhost:${port}`);
 });
 
-// download and convert song with selected bitrate
-// every download request creates session directory that gets deleted after a minute
 app.get('/download', async (req, res) => {
     console.log('download started')
 
@@ -35,7 +33,7 @@ app.get('/download', async (req, res) => {
     await Utils.downloadSong(info, res)
 })
 
-// get song info
+// song info
 app.get('/getInfo', async (req, res) => {
     console.log('looking for song');
     const info = await Utils.getInfo(req.query.url);

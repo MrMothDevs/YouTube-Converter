@@ -108,22 +108,7 @@ const convertWebmToMp3 = (info) => {
 async function downloadSong(info, res){
     createDir(info.sessionDir)
     console.log(info)
-
-    // ytdl-core version - too slow becouse google sucks :(
-    // ytdl(info.songUrl, { quality: 'highestaudio' }).pipe(fs.createWriteStream(info.sessionDir+'ytsong.webm')).on("finish", () => {
-    //     console.log("Song download finished!");
-    //     preprocessSong(info)
-    //         .then((info) => {
-    //             console.log('info', info.songPath)
-    //             console.log(fs.existsSync(info.songPath))
-
-    //             res.set({
-    //                 "Access-Control-Allow-Origin": "*",
-    //             })
-    //             res.json(info)
-    //         })
-    // });
-
+    
     const request = {
         url: info.songUrl,
         sessionDir: info.sessionDir
